@@ -10,67 +10,81 @@
     --bg:#f6f4fb; --paper:#ffffff; --ink:#231f2e; --muted:#6b6478;
     --line:#e9e3f4; --violet:#7c5cbf; --violet-deep:#5b3fa0; --violet-wash:#f2ecfb;
     --good:#3f9d76; --good-bg:#e8f5ef; --warn:#c98a2e; --warn-bg:#fbf3e4;
-    --soft:#8a6fca;
+    --early:#5f6b73; --early-bg:#eef0f4;
   }
   *{box-sizing:border-box; margin:0; padding:0}
   html{-webkit-font-smoothing:antialiased}
   body{ background:var(--bg); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6; padding:28px 16px 60px }
-  .wrap{ max-width:760px; margin:0 auto }
+    line-height:1.6; padding:26px 16px 60px }
+  .wrap{ max-width:770px; margin:0 auto }
 
   .hero{ background:linear-gradient(135deg,#6f52b6,#8a6fca); color:#fff;
-    border-radius:20px; padding:34px 30px; box-shadow:0 18px 44px rgba(92,63,160,.22) }
+    border-radius:20px; padding:32px 30px; box-shadow:0 18px 44px rgba(92,63,160,.22) }
   .hero .eyebrow{ font-size:12px; letter-spacing:2px; text-transform:uppercase; opacity:.85; font-weight:600 }
-  .hero h1{ font-size:26px; line-height:1.25; margin:8px 0 10px; font-weight:700; letter-spacing:-.3px }
-  .hero p{ font-size:15px; opacity:.94; max-width:60ch }
-  .hero .ovr{ display:inline-flex; align-items:center; gap:8px; margin-top:18px;
+  .hero h1{ font-size:25px; line-height:1.25; margin:8px 0 10px; font-weight:700; letter-spacing:-.3px }
+  .hero p{ font-size:15px; opacity:.94; max-width:62ch }
+  .hero .ovr{ display:inline-flex; align-items:center; gap:8px; margin-top:16px;
     background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
     padding:8px 14px; border-radius:999px; font-size:13px; font-weight:600 }
   .hero .ovr b{ font-size:15px }
 
   .intro{ background:var(--paper); border:1px solid var(--line); border-radius:16px;
-    padding:22px 24px; margin:18px 0; font-size:15px; color:#41394f }
+    padding:20px 24px; margin:18px 0; font-size:14.5px; color:#41394f }
   .intro b{ color:var(--ink) }
 
-  .legend{ display:flex; flex-wrap:wrap; gap:10px; margin:0 2px 20px; font-size:12.5px; color:var(--muted) }
+  .toc{ display:flex; flex-wrap:wrap; gap:8px; margin:0 2px 18px }
+  .toc a{ font-size:12.5px; font-weight:600; color:var(--violet-deep); background:var(--violet-wash);
+    border:1px solid #e4d9f6; padding:6px 11px; border-radius:999px; text-decoration:none }
+  .toc a:hover{ background:#e9def8 }
+
+  .legend{ display:flex; flex-wrap:wrap; gap:12px; margin:0 2px 18px; font-size:12.5px; color:var(--muted) }
   .legend .k{ display:inline-flex; align-items:center; gap:6px }
   .dot{ width:10px; height:10px; border-radius:50% }
 
+  .sec-h{ font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--violet-deep); margin:24px 4px 10px }
+
   .card{ background:var(--paper); border:1px solid var(--line); border-radius:16px;
-    padding:22px 24px; margin-bottom:16px; box-shadow:0 4px 14px rgba(35,31,46,.03) }
-  .card .top{ display:flex; align-items:flex-start; justify-content:space-between; gap:14px; margin-bottom:6px }
-  .card h2{ font-size:18px; font-weight:700; letter-spacing:-.2px; color:var(--violet-deep) }
+    padding:20px 22px; margin-bottom:14px; box-shadow:0 4px 14px rgba(35,31,46,.03) }
+  .card .top{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:4px }
+  .card h2{ font-size:17px; font-weight:700; letter-spacing:-.2px; color:var(--ink) }
   .card .stage{ font-size:12px; font-weight:600; color:var(--muted); margin-top:2px }
-  .verif{ flex:none; font-size:12px; font-weight:700; padding:5px 11px; border-radius:999px; white-space:nowrap }
+  .verif{ flex:none; font-size:12px; font-weight:700; padding:5px 10px; border-radius:999px; white-space:nowrap }
   .v-hi{ background:var(--good-bg); color:var(--good) }
   .v-md{ background:var(--warn-bg); color:var(--warn) }
-  .card p{ font-size:14.5px; color:#4a4358; margin-top:10px }
+  .v-lo{ background:var(--early-bg); color:var(--early) }
+  .card p{ font-size:14.5px; color:#4a4358; margin-top:9px }
   .card p b{ color:var(--ink) }
-  .pill{ display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
+  .pill{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
     padding:3px 9px; border-radius:6px; margin-bottom:4px }
   .p-now{ background:var(--good-bg); color:var(--good) }
   .p-soon{ background:var(--violet-wash); color:var(--violet-deep) }
-  .p-early{ background:#eef0f4; color:#5f6b73 }
+  .p-early{ background:var(--early-bg); color:var(--early) }
+  .p-care{ background:#e6f0fb; color:#3d6fa5 }
   .card ul{ margin:10px 0 0 2px; padding-left:18px; font-size:14px; color:#4a4358 }
-  .card li{ margin:5px 0 }
+  .card li{ margin:6px 0 }
+  .card li b{ color:var(--ink) }
+  .note{ font-size:12.5px; color:var(--muted); margin-top:8px }
 
-  .timeline{ background:var(--violet-wash); border:1px solid #e2d7f4; border-radius:16px; padding:22px 24px; margin-bottom:16px }
-  .timeline h2{ font-size:17px; color:var(--violet-deep); font-weight:700; margin-bottom:12px }
+  .timeline{ background:var(--violet-wash); border:1px solid #e2d7f4; border-radius:16px; padding:20px 22px; margin:6px 0 14px }
+  .timeline h2{ font-size:16px; color:var(--violet-deep); font-weight:700; margin-bottom:10px }
   .trow{ display:flex; gap:12px; align-items:baseline; padding:8px 0; border-top:1px solid #e6dcf6 }
   .trow:first-of-type{ border-top:none }
-  .trow .when{ flex:none; width:96px; font-weight:700; font-size:13px; color:var(--violet-deep) }
-  .trow .what{ font-size:14px; color:#4a4358 }
+  .trow .when{ flex:none; width:84px; font-weight:700; font-size:13px; color:var(--violet-deep) }
+  .trow .what{ font-size:13.5px; color:#4a4358 }
 
-  .res{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px 24px; margin-bottom:16px }
-  .res h2{ font-size:16px; color:var(--violet-deep); font-weight:700; margin-bottom:10px }
-  .res a{ color:var(--violet-deep); font-weight:600; text-decoration:none }
-  .res a:hover{ text-decoration:underline }
-  .res li{ margin:6px 0; font-size:14px }
+  .src{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px 22px; margin-bottom:14px }
+  .src h3{ font-size:13.5px; color:var(--violet-deep); font-weight:700; margin:14px 0 6px }
+  .src h3:first-child{ margin-top:0 }
+  .src a{ color:var(--violet-deep); font-weight:500; text-decoration:none }
+  .src a:hover{ text-decoration:underline }
+  .src li{ margin:5px 0; font-size:13.5px }
+  .src ul{ padding-left:18px }
 
-  .foot{ margin-top:26px; padding:22px 24px; background:#efeaf7; border:1px solid var(--line);
+  .foot{ margin-top:22px; padding:22px 24px; background:#efeaf7; border:1px solid var(--line);
     border-radius:16px; font-size:12.5px; color:var(--muted); line-height:1.6 }
-  .foot .runrow{ display:flex; flex-wrap:wrap; gap:18px; margin-bottom:14px }
+  .foot .runrow{ display:flex; flex-wrap:wrap; gap:16px; margin-bottom:14px }
   .foot .runrow div{ font-size:13px }
   .foot .runrow b{ color:var(--ink) }
   .foot .disc{ border-top:1px solid #ddd4ee; padding-top:12px }
@@ -83,72 +97,193 @@
 
   <div class="hero">
     <div class="eyebrow">Treatment &amp; Research Monitor</div>
-    <h1>Rett Syndrome — where treatments &amp; research stand</h1>
-    <p>A calm, honest snapshot of real progress toward treating Rett syndrome, with a focus on the <b>MECP2 R255X</b> variant. Refreshed every three months so the people who care can follow the science without chasing it.</p>
-    <span class="ovr">Overall grounding <b>89%</b></span>
+    <h1>Rett Syndrome — the full picture for families</h1>
+    <p>An honest, plain-language deep-dive into everything that matters if you love someone with Rett syndrome (with a focus on the <b>MECP2 R255X</b> variant): approved medicines, every avenue in trials, the genetic "cure" research, day-to-day care, and how to reach trials. Refreshed every three months.</p>
+    <span class="ovr">Overall grounding <b>87%</b></span>
   </div>
 
   <div class="intro">
-    Rett syndrome is caused by changes in a single gene, <b>MECP2</b>. For a long time there was nothing to offer but supportive care. That has genuinely changed: there is now an <b>approved medicine for the symptoms</b>, and — for the first time — therapies aimed at the <b>root cause</b> are in human trials with encouraging results. This page tracks that progress in plain language. Each section shows a <b>grounding score</b> — how solid the evidence behind it is right now.
+    Rett syndrome comes from changes in one gene, <b>MECP2</b>. For decades there was only supportive care. That has genuinely changed: there is now an <b>approved medicine</b>, more drugs in trials, and — for the first time — therapies aimed at the <b>root cause</b> are in humans. Below, each item carries a <b>grounding score</b> showing how solid today's evidence is: <span style="color:var(--good);font-weight:600">high</span> = approved / regulatory, <span style="color:var(--warn);font-weight:600">moderate</span> = promising trials, <span style="color:var(--early);font-weight:600">early</span> = lab research.
+  </div>
+
+  <div class="toc">
+    <a href="#meds">💊 Medicines</a>
+    <a href="#gene">🧬 Gene therapy</a>
+    <a href="#root">🔧 Fixing the gene</a>
+    <a href="#care">🩺 Managing health</a>
+    <a href="#therapies">🤝 Everyday therapies</a>
+    <a href="#access">📋 Reaching trials</a>
+    <a href="#sources">🔗 Sources</a>
   </div>
 
   <div class="legend">
-    <span class="k"><span class="dot" style="background:var(--good)"></span> High grounding — primary / regulatory sources</span>
-    <span class="k"><span class="dot" style="background:var(--warn)"></span> Moderate — promising but early research</span>
+    <span class="k"><span class="dot" style="background:var(--good)"></span> High grounding</span>
+    <span class="k"><span class="dot" style="background:var(--warn)"></span> Moderate — in trials</span>
+    <span class="k"><span class="dot" style="background:var(--early)"></span> Early — lab stage</span>
   </div>
+
+  <!-- MEDICINES -->
+  <div class="sec-h" id="meds">💊 Medicines</div>
 
   <div class="card">
     <div class="top">
-      <div><span class="pill p-now">Available now</span><h2>Trofinetide (Daybue) — treating the symptoms</h2>
-        <div class="stage">First medicine approved for Rett syndrome</div></div>
+      <div><span class="pill p-now">Available now</span><h2>Trofinetide (Daybue)</h2>
+        <div class="stage">First medicine approved for Rett syndrome · treats symptoms</div></div>
       <span class="verif v-hi">Grounding 95%</span>
     </div>
-    <p>Trofinetide is the <b>first medicine ever approved specifically for Rett syndrome</b>. It doesn't fix the gene, but in trials it improved communication and behavioural symptoms. It's <b>approved in the US and Canada</b> (as Daybue).</p>
-    <p><b>Europe — a real turning point:</b> after an initial rejection in February 2026, European regulators (the EMA's CHMP) <b>reversed course and recommended approval on 26 June 2026</b>. A final European Commission decision is expected in the coming months — which would make it the <b>first approved Rett therapy in the EU</b>.</p>
+    <p>The <b>first medicine ever approved specifically for Rett syndrome</b>. It eases communication and behavioural symptoms (it doesn't fix the gene). <b>Approved in the US &amp; Canada.</b> In <b>Europe</b>, after an initial rejection, regulators <b>reversed course and recommended approval on 26 June 2026</b> — a final EU decision is expected within months, which would make it the first approved Rett therapy in the EU.</p>
   </div>
 
   <div class="card">
     <div class="top">
-      <div><span class="pill p-soon">In human trials</span><h2>Gene therapy — going after the root cause</h2>
-        <div class="stage">One-time treatment, delivers a working copy of MECP2</div></div>
+      <div><span class="pill p-soon">In trials</span><h2>Blarcamesine (ANAVEX 2-73) &amp; Fenfluramine (Fintepla)</h2>
+        <div class="stage">Other drugs being tested for symptoms &amp; seizures</div></div>
+      <span class="verif v-md">Grounding 85%</span>
+    </div>
+    <ul>
+      <li><b>Blarcamesine (ANAVEX 2-73)</b> — an oral drug acting on the sigma-1 receptor. Results are <b>mixed</b>: an adult Phase 3 (AVATAR) showed significant benefit, but the pediatric Phase 2/3 (EXCELLENCE, 92 children) improved behaviour without clearly beating placebo. Still under evaluation.</li>
+      <li><b>Fenfluramine (Fintepla)</b> — already used for other epilepsies; the maker (UCB) planned to start a <b>Phase 3 program in Rett</b> in 2026, aimed mainly at seizures.</li>
+    </ul>
+  </div>
+
+  <!-- GENE THERAPY -->
+  <div class="sec-h" id="gene">🧬 Gene therapy — going after the root cause</div>
+
+  <div class="card">
+    <div class="top">
+      <div><span class="pill p-soon">In human trials</span><h2>NGN-401 &amp; TSHA-102</h2>
+        <div class="stage">One-time therapies that deliver a working MECP2 gene</div></div>
       <span class="verif v-hi">Grounding 90%</span>
     </div>
-    <p>This is the biggest source of hope. Instead of easing symptoms, gene therapy aims to give cells a <b>functional copy of the MECP2 gene</b> — addressing the actual cause. Two programs are furthest along:</p>
+    <p>The biggest source of hope: instead of easing symptoms, these give cells a <b>functional copy of MECP2</b>, addressing the actual cause. Two programs lead:</p>
     <ul>
-      <li><b>NGN-401 (Neurogene)</b> — updated Phase 1/2 results (June 2026) are encouraging: participants gained developmental milestones (about <b>4.7 new milestones each</b>) with continued improvement out to <b>30 months</b>, and it has been <b>generally well tolerated across 35 participants</b> with no treatment-related serious safety events at the studied dose. Its registrational trial has finished dosing; fuller "topline" results are expected in the <b>second half of 2027</b>.</li>
-      <li><b>TSHA-102 (Taysha)</b> — a one-time therapy delivered into the spinal fluid. The <b>pivotal (Phase 3) trial began dosing in late 2025</b>, and the company has aligned with the FDA on the path toward a filing for approval.</li>
+      <li><b>NGN-401 (Neurogene)</b> — updated Phase 1/2 data (June 2026) is encouraging: children gained developmental milestones (~<b>4.7 each</b>), improving out to <b>30 months</b>, and it was <b>generally well tolerated across 35 participants</b> with no treatment-related serious safety events at the studied dose. Its registrational trial has finished dosing; fuller results are expected <b>2nd half of 2027</b>.</li>
+      <li><b>TSHA-102 (Taysha)</b> — a one-time therapy delivered into the spinal fluid. Its <b>pivotal (Phase 3) trial began dosing in late 2025</b>, with an agreed path toward a filing for approval.</li>
     </ul>
-    <p style="font-size:13px;color:var(--muted)">These are still investigational — not yet approved — but they are in the decisive stage of testing.</p>
+    <p class="note">Investigational — not yet approved — but in the decisive testing stage.</p>
+  </div>
+
+  <!-- FIXING THE GENE -->
+  <div class="sec-h" id="root">🔧 Repairing the gene itself</div>
+
+  <div class="card">
+    <div class="top">
+      <div><span class="pill p-early">Lab research</span><h2>Reawakening the healthy “silent” copy (X-reactivation)</h2>
+        <div class="stage">Could work for any mutation, including R255X</div></div>
+      <span class="verif v-lo">Grounding 78%</span>
+    </div>
+    <p>Girls with Rett usually carry <b>one healthy MECP2 copy that sits switched off</b> on the inactive X chromosome. A major research push aims to <b>switch that healthy copy back on</b> — which would help regardless of the specific mutation. In the lab, combining an <b>antisense molecule (targeting "Xist")</b> with drugs that loosen DNA silencing produced strong reactivation, and <b>epigenome editing</b> restored MECP2 in patient-derived neurons. Still preclinical, but conceptually powerful.</p>
   </div>
 
   <div class="card">
     <div class="top">
-      <div><span class="pill p-early">Earlier-stage research</span><h2>Specific to R255X — repairing the “stop” signal</h2>
-        <div class="stage">Read-through &amp; engineered-tRNA approaches (lab stage)</div></div>
-      <span class="verif v-md">Grounding 80%</span>
+      <div><span class="pill p-early">Lab research</span><h2>R255X-specific: reading through the “stop” signal</h2>
+        <div class="stage">Read-through drugs &amp; engineered tRNAs</div></div>
+      <span class="verif v-lo">Grounding 80%</span>
     </div>
-    <p>The <b>R255X</b> change is a "nonsense" mutation — it inserts a premature <b>stop signal</b> so the protein is cut short. It's one of the most common Rett mutations (~35% of cases are this type), which makes it a <b>major research target</b>. A promising idea is to make the cell <b>"read through" that false stop</b> and build the full protein again:</p>
+    <p>R255X is a "nonsense" mutation — it inserts a premature <b>stop signal</b> that cuts the protein short. It's one of the most common Rett mutations (~35% of cases), making it a big research target. The idea is to make the cell <b>ignore that false stop</b> and build the whole protein again: newer <b>read-through compounds</b> (e.g. CDX enhancers with low-dose gentamicin) and <b>engineered tRNAs</b> restored up to ~60% of the full protein in lab tests. In cells for now, but aimed squarely at R255X.</p>
+  </div>
+
+  <!-- MANAGING HEALTH -->
+  <div class="sec-h" id="care">🩺 Managing symptoms &amp; health (day to day)</div>
+
+  <div class="card">
+    <div class="top">
+      <div><span class="pill p-care">Standard care</span><h2>What to watch and treat</h2>
+        <div class="stage">From the IRSF Comprehensive Care Guidelines</div></div>
+      <span class="verif v-hi">Grounding 92%</span>
+    </div>
     <ul>
-      <li><b>Read-through compounds</b> — newer molecules (e.g. CDX enhancers with low-dose gentamicin) restored full-length protein in cells, aiming to avoid the toxicity of older drugs.</li>
-      <li><b>Engineered tRNAs</b> — custom-designed molecules that overrode the false stop and restored <b>up to ~60% of the full protein</b> in laboratory tests.</li>
+      <li><b>Seizures</b> (~74% of people) — managed with anti-seizure medicines; a <b>ketogenic diet</b> can help hard-to-control seizures (under specialist supervision).</li>
+      <li><b>Heart rhythm (QT prolongation)</b> — an important, often-missed risk. <b>Regular EKGs are recommended</b>, and some medicines that prolong the QT interval should be used with caution.</li>
+      <li><b>Breathing irregularities</b> — breath-holding/hyperventilation; screen for sleep apnea with a sleep study if snoring or pauses occur.</li>
+      <li><b>Digestion</b> — constipation (~65%) and reflux are common and treatable; some children need a feeding tube for growth/safety.</li>
+      <li><b>Spine (scoliosis)</b> — common, usually appearing ages 8–11; monitored regularly, occasionally needs surgery.</li>
+      <li><b>Bones</b> — higher fracture risk; attention to vitamin D, calcium and weight-bearing activity.</li>
     </ul>
-    <p style="font-size:13px;color:var(--muted)">These results are in cells and lab models — not yet in people — but they're aimed squarely at R255X.</p>
+    <p class="note">Care is best coordinated by a multidisciplinary team — this is general information, not a treatment plan.</p>
+  </div>
+
+  <!-- THERAPIES -->
+  <div class="sec-h" id="therapies">🤝 Everyday therapies that help quality of life</div>
+
+  <div class="card">
+    <div class="top">
+      <div><span class="pill p-care">Supportive</span><h2>Communication, movement, music &amp; diet</h2>
+        <div class="stage">What families and therapists find helps most</div></div>
+      <span class="verif v-md">Grounding 86%</span>
+    </div>
+    <ul>
+      <li><b>Eye-gaze communication</b> — eye-tracking devices (AAC) are one of the most meaningful tools, letting many girls communicate choices and connect, despite limited hand use.</li>
+      <li><b>Physical therapy</b> — maintains mobility and prevents joint tightening (contractures); <b>occupational therapy</b> supports hand use and daily skills.</li>
+      <li><b>Music therapy</b> — encouraging evidence: better communication, eye contact, social engagement and hand use — and in one study, fewer seizures.</li>
+      <li><b>Hydrotherapy &amp; movement</b> — swimming/treadmill/sensory approaches help function and enjoyment.</li>
+      <li><b>Diet &amp; supplements</b> — ketogenic diet for seizures (supervised); <b>CBD/CBDV</b> shows anti-seizure promise in early studies. Discuss any supplement with the care team.</li>
+    </ul>
+  </div>
+
+  <!-- ACCESS -->
+  <div class="sec-h" id="access">📋 Getting into trials &amp; staying informed</div>
+
+  <div class="card">
+    <div class="top">
+      <div><span class="pill p-now">Actionable</span><h2>Registries, natural-history &amp; expert centers</h2>
+        <div class="stage">The practical route to trials and best care</div></div>
+      <span class="verif v-hi">Grounding 90%</span>
+    </div>
+    <ul>
+      <li><b>Join a registry</b> — the <b>RSRT Global Registry</b> and the <b>IRSF Rett Syndrome Registry</b> are the main ways families get <b>notified about eligible trials</b> and contribute data that speeds research.</li>
+      <li><b>Natural History Study</b> — a 15-year US study of 1,000+ individuals underpins today's trials and care standards.</li>
+      <li><b>Centers of Excellence</b> — specialist Rett clinics (many in the US, e.g. UNC, CHOP) run trials and coordinate complex care; <b>Rett Syndrome Europe</b> runs a European registry and connects families across countries.</li>
+      <li><b>ClinicalTrials.gov</b> — the official, always-current list of every active Rett trial worldwide.</li>
+    </ul>
   </div>
 
   <div class="timeline">
     <h2>The outlook, in one glance</h2>
-    <div class="trow"><div class="when">Now</div><div class="what">A symptom medicine is approved (US/Canada) and on Europe's doorstep.</div></div>
+    <div class="trow"><div class="when">Now</div><div class="what">An approved symptom medicine (US/Canada; Europe imminent) + strong supportive care.</div></div>
     <div class="trow"><div class="when">2026–27</div><div class="what">Gene-therapy trials read out — the first potential root-cause treatments.</div></div>
-    <div class="trow"><div class="when">Beyond</div><div class="what">R255X-specific "read-through" approaches move from the lab toward the clinic.</div></div>
+    <div class="trow"><div class="when">Beyond</div><div class="what">X-reactivation &amp; R255X read-through move from the lab toward the clinic.</div></div>
   </div>
 
-  <div class="res">
-    <h2>Trusted places to follow &amp; help</h2>
+  <!-- SOURCES -->
+  <div class="sec-h" id="sources">🔗 Sources &amp; links</div>
+  <div class="src">
+    <h3>Overview, care &amp; support</h3>
     <ul>
-      <li><a href="https://reverserett.org/" target="_blank" rel="noopener">Rett Syndrome Research Trust (RSRT)</a> — research funding + a global patient registry for trial notifications</li>
-      <li><a href="https://www.rettsyndrome.org/" target="_blank" rel="noopener">International Rett Syndrome Foundation (IRSF)</a> — trials, clinics, family support</li>
-      <li><a href="https://rettsyndrome.eu/" target="_blank" rel="noopener">Rett Syndrome Europe</a> — European news &amp; advocacy</li>
-      <li><a href="https://clinicaltrials.gov/search?cond=Rett%20Syndrome" target="_blank" rel="noopener">ClinicalTrials.gov</a> — the full official list of active Rett trials</li>
+      <li><a href="https://www.rettsyndrome.org/about-rett-syndrome/pipeline/" target="_blank" rel="noopener">IRSF — Research &amp; Clinical Pipeline</a></li>
+      <li><a href="https://www.rettsyndrome.org/wp-content/uploads/2024/12/Comprehensive-Care-Guidelines_digital.pdf" target="_blank" rel="noopener">IRSF — Comprehensive Care Guidelines (PDF)</a></li>
+      <li><a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1766679/full" target="_blank" rel="noopener">Frontiers 2026 — Disease-modifying therapies for Rett (review for neurologists)</a></li>
+      <li><a href="https://www.mayoclinic.org/diseases-conditions/rett-syndrome/diagnosis-treatment/drc-20377233" target="_blank" rel="noopener">Mayo Clinic — Rett syndrome diagnosis &amp; treatment</a></li>
+    </ul>
+    <h3>Approved &amp; trial medicines</h3>
+    <ul>
+      <li><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/daybu" target="_blank" rel="noopener">EMA — Daybu (trofinetide)</a> · <a href="https://acadia.com/en-us/media/news-releases/daybu-trofinetide-recommended-for-approval-in-the-european-union-by-chmp" target="_blank" rel="noopener">Acadia — CHMP positive opinion (Jun 2026)</a></li>
+      <li><a href="https://clinicaltrials.gov/study/NCT04304482" target="_blank" rel="noopener">ClinicalTrials.gov — ANAVEX 2-73 (blarcamesine) in Rett</a> · <a href="https://www.anavex.com/post/anavex-life-sciences-provides-update-rett-syndrome-program" target="_blank" rel="noopener">Anavex — Rett program update</a></li>
+      <li><a href="https://www.neurologylive.com/view/phase-2-3-study-blarcamesine-pediatrics-with-rett-syndrome-completes-enrollment" target="_blank" rel="noopener">NeurologyLive — pediatric blarcamesine (EXCELLENCE)</a></li>
+    </ul>
+    <h3>Gene therapy</h3>
+    <ul>
+      <li><a href="https://reverserett.org/news/articles/a-review-of-gene-therapy-clinical-trials/" target="_blank" rel="noopener">RSRT — Review of gene-therapy trials (Taysha &amp; Neurogene)</a></li>
+      <li><a href="https://www.rettsyndrome.org/neurogene-announces-recent-achievements-and-anticipated-2026-key-milestones-for-ngn-401-a-potential-best-in-class-gene-therapy-for-rett-syndrome/" target="_blank" rel="noopener">IRSF/Neurogene — NGN-401 2026 milestones</a> · <a href="https://ir.tayshagtx.com/news-releases/news-release-details/taysha-gene-therapies-announces-progress-across-tsha-102-pivotal" target="_blank" rel="noopener">Taysha — TSHA-102 pivotal progress</a></li>
+    </ul>
+    <h3>Repairing the gene (research)</h3>
+    <ul>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9915138/" target="_blank" rel="noopener">Selective Xi reactivation &amp; alternative methods to restore MECP2</a></li>
+      <li><a href="https://www.science.org/doi/10.1126/scitranslmed.add4666" target="_blank" rel="noopener">Science Transl. Med — Multiplex epigenome editing of MECP2</a></li>
+      <li><a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1778877/full" target="_blank" rel="noopener">Frontiers 2026 — Anticodon-engineered tRNAs for MECP2 nonsense mutations (R255X)</a></li>
+    </ul>
+    <h3>Everyday therapies</h3>
+    <ul>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7407501/" target="_blank" rel="noopener">Evidence-based physical therapy for Rett — systematic review</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4785214/" target="_blank" rel="noopener">Eye-gaze (AAC) technology in Rett — family experiences</a></li>
+      <li><a href="https://rettsyndromenews.com/music-therapy/" target="_blank" rel="noopener">Music therapy in Rett</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6614559/" target="_blank" rel="noopener">Cannabinoids, ketogenic diet &amp; other avenues (review)</a></li>
+    </ul>
+    <h3>Registries, trials &amp; centers</h3>
+    <ul>
+      <li><a href="https://reverserett.org/global-registry/" target="_blank" rel="noopener">RSRT — Global Rett Registry</a> · <a href="https://www.rettsyndrome.org/rett-syndrome-registry/" target="_blank" rel="noopener">IRSF — Rett Syndrome Registry</a></li>
+      <li><a href="https://clinicaltrials.gov/search?cond=Rett%20Syndrome" target="_blank" rel="noopener">ClinicalTrials.gov — all active Rett trials</a></li>
+      <li><a href="https://rettsyndrome.eu/" target="_blank" rel="noopener">Rett Syndrome Europe</a> · <a href="https://med.unc.edu/neurology/divisions/child-neurology-1/rett-syndrome-clinic" target="_blank" rel="noopener">UNC Rett Center of Excellence</a> · <a href="https://www.research.chop.edu/rett-syndrome-clinical-research-center-of-excellence" target="_blank" rel="noopener">CHOP Rett Center</a></li>
     </ul>
   </div>
 
@@ -156,10 +291,10 @@
     <div class="runrow">
       <div>🔬 <b>Last research run:</b> 25 July 2026</div>
       <div>⏭️ <b>Next scheduled update:</b> 25 October 2026</div>
-      <div>📊 <b>Overall grounding:</b> 89%</div>
+      <div>📊 <b>Overall grounding:</b> 87%</div>
     </div>
     <div class="disc">
-      <b>Disclaimer.</b> This page is a plain-language summary compiled from public sources for information only. It is <b>not medical advice</b> and is not a substitute for a qualified clinician. Treatment status, trial eligibility, and approvals change and vary by country — always confirm current details with a treating physician and the official sources above. Investigational therapies named here are not approved treatments. No personal or identifying information is contained on this page.
+      <b>Disclaimer.</b> This page is a plain-language summary compiled from public sources for information only. It is <b>not medical advice</b> and is not a substitute for a qualified clinician. Treatment status, trial eligibility, drug safety, and approvals change and vary by country — always confirm current details with a treating physician and the official sources above. Investigational therapies and off-label uses named here are not approved treatments; never start, stop, or change any treatment, diet, or supplement without medical guidance. No personal or identifying information is contained on this page.
     </div>
     <div class="cred">Updated automatically every 3 months · grounding scores reflect source strength at the last run · monitored with <a href="https://getempirica.com" target="_blank" rel="noopener">Empirica</a></div>
   </div>

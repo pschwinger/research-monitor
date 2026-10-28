@@ -102,3 +102,8 @@
   .hist .trow{ border-top:1px solid var(--line) }
   .hist .trow .when{ color:var(--violet-deep) }
   @media (max-width:480px){ .hero{ padding:24px 20px } .card, .src, .new{ padding:16px 16px } }
+  .card a, .new a, .hist a, .warnbox a, .intro a, .delta a{ color:var(--violet-deep); font-weight:600; text-decoration:underline; text-decoration-color:#cdbdea; text-underline-offset:2px }
+  .card a:hover, .new a:hover, .hist a:hover, .delta a:hover{ text-decoration-color:var(--violet-deep) }
+  .delta{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:18px 22px; margin-bottom:14px; font-size:13.5px; color:#4a4358 }
+  .delta h2{ font-size:16px; color:var(--violet-deep); margin-bottom:8px }
+  .delta td.add{ color:#2f6f53 } .delta td.fix{ color:#8a5a12 }
